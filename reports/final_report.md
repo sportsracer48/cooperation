@@ -10,7 +10,7 @@ Ohdaira's experiment adds a 'decision cost' to the agents' strategies, which is 
 
 Ohdaira finds that the addition of decision allows cooperation to dominate in Barabasi Albert [2] networks where otherwise defection would dominates, and allows cooperation to dominate faster than it otherwise would in ring lattices, but has little impact in the Watts Strogatz [3] network. All of the networks he uses have an average degree of four.
 
-I reproduce his result on the ring lattice with my own python implementation of his model, but refute his result on the and Watts Strogatz and Barabasi Albert networks. I use networks with 1000 nodes and an average degree of four.
+I reproduce his result on the ring lattice with my own python implementation of his model, but refute his result on the and Watts Strogatz and Barabasi Albert networks. I use networks with 1000 nodes and an average degree of four. You can see my code [here](https://github.com/sportsracer48/cooperation/blob/master/code/Extension.ipynb), or run it [here](https://mybinder.org/v2/gh/sportsracer48/cooperation/master?filepath=code%2FExtension.ipynb).
 
 ![](https://raw.githubusercontent.com/sportsracer48/cooperation/master/code/Ring_Lattice.png)
 
