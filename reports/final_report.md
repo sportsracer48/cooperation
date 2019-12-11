@@ -12,19 +12,19 @@ Ohdaira finds that the addition of decision allows cooperation to dominate in Ba
 
 I reproduce his result on the ring lattice with my own python implementation of his model, but refute his result on the and Watts Strogatz and Barabasi Albert networks. I use networks with 1000 nodes and an average degree of four.
 
-![](https://raw.githubusercontent.com/sportsracer48/cooperation/master/code/Ring Lattice.png)
+![](https://raw.githubusercontent.com/sportsracer48/cooperation/master/code/Ring_Lattice.png)
 
 **Figure 1:** *Evolution of the ring lattice model with and without decision costs. The pale lines show individual simulations, and the dark lines are the averages over all ten iterations. "Niceness" here refers proportion of situations in which the agents will cooperate on average. Since these agents either always cooperate or always defect, this is the same as the proportion of agents who cooperate on their first turn, as shown.*
 
 On the ring lattice, the addition of the decision cost does indeed cause cooperation to dominate faster. However it does eventually dominate anyway, and the result is somewhat unstable, needing to be averaged over many iterations of the experiment to appear. This is shown in Figure 1. In this localized network, as soon as defectors spread they create clusters of exclusively defectors with negative fitness (they score 0 for defecting, then subtract their costs). When cooperators spread, they create clusters of cooperators with positive fitness, even after subtracting their costs. This allows cooperators to invade defectors, but not visa versa.
 
-![](https://raw.githubusercontent.com/sportsracer48/cooperation/master/code/Watts Strogatz.png)
+![](https://raw.githubusercontent.com/sportsracer48/cooperation/master/code/Watts_Strogatz_Graph.png)
 
 **Figure 2:** *Evolution of the Watts Strogatz model with and without decision costs.*
 
 On the Watts Strogatz graph, neither strategy ever dominates, but the addition of decision costs shifts the equilibrium towards cooperation, and does so in every single iteration of the experiment, as shown in Figure 2. It is clear to me that the decision cost helps cooperators in this network, but Odhaira does not seem to think so. The effect does look less pronounced in his results, but I suspect this is because he had fewer nodes in his network, since he does not publish this figure. The same effect as in the ring lattice explains this behavior, but the bridges of the Watts Strogatz graph allow pockets of defectors to survive if they have access to multiple cooperators. These bridges also reduce the time needed for the network to reach equilibrium by reducing its mean path length.
 
-![](https://raw.githubusercontent.com/sportsracer48/cooperation/master/code/Barabasi Albert.png)
+![](https://raw.githubusercontent.com/sportsracer48/cooperation/master/code/Barabasi_Albert_Graph.png)
 
 **Figure 3:** *Evolution of the Barabasi Albert model with and without decision costs.*
 
@@ -32,19 +32,19 @@ Ohdaira and I both find that the Barabasi Albert network reaches its equilibrium
 
 Having found that simple explanations and random effects can explain most of the behavior here, I extend the model to a "three bit" system, where the agents play two rounds against each neighbor and can choose their second play based on what their opponent played on the first round. Indeed, in all three models the effect of decision cost on cooperation is either less pronounced, gone, or reversed!
 
-![](https://raw.githubusercontent.com/sportsracer48/cooperation/master/code/Ring Lattice 3 bit.png)
+![](https://raw.githubusercontent.com/sportsracer48/cooperation/master/code/Ring_Lattice_3_bit.png)
 
 **Figure 4:** *Evolution of the three bit ring lattice model with and without decision costs.*
 
 Figure 4 shows that the increase in the speed at which cooperation dominates with decision cost is less pronounced, and that the networks without cost are nicer on average than those with cost.
 
-![](https://raw.githubusercontent.com/sportsracer48/cooperation/master/code/Watts Strogatz 3 bit.png)
+![](https://raw.githubusercontent.com/sportsracer48/cooperation/master/code/Watts_Strogatz_Graph_3_bit.png)
 
 **Figure 5:** *Evolution of the three bit Watts Strogatz model with and without decision costs.*
 
 Figure 5 shows that the average niceness at equilibrium is almost identical with or without decision cost, and that the networks without decision cost have slightly more cooperation on round one.
 
-![](https://raw.githubusercontent.com/sportsracer48/cooperation/master/code/Barabasi Albert 3 bit.png)
+![](https://raw.githubusercontent.com/sportsracer48/cooperation/master/code/Barabasi_Albert_Graph_3_bit.png)
 
 **Figure 6:** *Evolution of the three bit Barabasi Albert model with and without decision costs.*
 
